@@ -9,7 +9,7 @@ public abstract class ChessPiece {
     public ChessPiece(String pos, Color clr) {
         validateArg(pos);
         color = clr;
-        position = pos.toUpperCase();
+        position = pos;
     }
 
     public String getPosition() {
@@ -30,12 +30,13 @@ public abstract class ChessPiece {
         if(pos.length() != 2)
             throw new IllegalArgumentException("Illegal move!");
 
-        char ltr = pos.toLowerCase().charAt(0);
+        char ltr = pos.toUpperCase().charAt(0);
         char dgt = pos.charAt(1);
 
-        if(ltr < 'a' || ltr > 'h' || !Character.isDigit(dgt) || dgt == '0')
+        if(ltr < 'A' || ltr > 'H' || !Character.isDigit(dgt) || dgt == '0')
             throw new IllegalArgumentException("Illegal move!");
     }
 
+    //Znam da je position unutar ploce, provjeriti dozvoljene pozicije za figuru
     public abstract void validatePosition(String position);
 }
