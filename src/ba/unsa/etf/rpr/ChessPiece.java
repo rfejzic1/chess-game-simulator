@@ -8,6 +8,7 @@ public abstract class ChessPiece {
 
     public ChessPiece(String pos, Color clr) {
         validateArg(pos);
+        //validatePosition(pos);
         color = clr;
         position = pos;
     }
@@ -33,7 +34,7 @@ public abstract class ChessPiece {
         char ltr = pos.toUpperCase().charAt(0);
         char dgt = pos.charAt(1);
 
-        if(ltr < 'A' || ltr > 'H' || !Character.isDigit(dgt) || dgt == '0')
+        if(ltr < 'A' || ltr > 'H' || !Character.isDigit(dgt) || dgt == '0' || dgt == '9')
             throw new IllegalArgumentException("Illegal move!");
     }
 
