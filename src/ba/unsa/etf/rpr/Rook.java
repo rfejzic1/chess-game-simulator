@@ -2,8 +2,8 @@ package ba.unsa.etf.rpr;
 
 import static java.lang.Math.abs;
 
-public class Rock extends ChessPiece {
-    public Rock(String position, Color color) {
+public class Rook extends ChessPiece {
+    public Rook(String position, Color color) {
         super(position, color);
     }
 
