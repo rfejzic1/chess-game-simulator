@@ -17,9 +17,26 @@ public class Pawn extends ChessPiece {
         int ltrDif = abs(cLtr - ltr);
         int dgtDif = abs(cDgt - dgt);
 
-        //ltrDif == 0 && (cDgt <= 4 && dgtDif <= 2 || cDgt > 4 && dgtDif <= 1), moze na istu poziciju?
-        //Pawn ide jedno polje nakon pola table!
-        if(!(ltrDif == 0 && (cDgt <= 4 && dgtDif <= 2 || cDgt > 4 && dgtDif <= 1)))
+        if(ltrDif != 0)
             throw new IllegalChessMoveException("Illegal move!");
+
+        if(getColor() == Color.WHITE) {
+            if(cDgt == '2') {
+                if (dgtDif > 2)
+                    throw new IllegalChessMoveException("White can move two!");
+            } else {
+                if(dgtDif > 1)
+                    throw new IllegalChessMoveException("White can move one!");
+            }
+        }else if(getColor() == Color.BLACK) {
+            if(cDgt == '7') {
+                if (dgtDif > 2)
+                    throw new IllegalChessMoveException("White can move two!");
+            } else {
+                if(dgtDif > 1)
+                    throw new IllegalChessMoveException("White can move one!");
+            }
+        }
+
     }
 }

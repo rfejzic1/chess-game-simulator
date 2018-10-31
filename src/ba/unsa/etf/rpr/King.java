@@ -19,7 +19,7 @@ public class King extends ChessPiece {
 
 
         //ltrDif <= 1 || dgtDiff <= 1 su ispravne pozicije, moze na istu poziciju?
-        if(ltrDif > 1 && dgtDif > 1)
+        if(ltrDif > 1 || dgtDif > 1)
             throw new IllegalChessMoveException("Illegal move!");
     }
 }

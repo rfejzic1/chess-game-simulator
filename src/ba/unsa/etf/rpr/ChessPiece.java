@@ -27,7 +27,7 @@ public abstract class ChessPiece {
         this.position = position;
     }
 
-    public void validateArg(String pos) {
+    public static void validateArg(String pos) {
         if(pos.length() != 2)
             throw new IllegalArgumentException("Illegal move!");
 

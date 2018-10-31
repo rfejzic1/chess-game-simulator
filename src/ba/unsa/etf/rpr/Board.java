@@ -39,8 +39,41 @@ public class Board {
         board[7][7] = new Bishop("H8", ChessPiece.Color.BLACK);
     }
 
-    public void move(Class type, ChessPiece.Color color, String position) {
+    private ChessPiece getChessPiece(String pos) {
+        ChessPiece.validateArg(pos);
 
+        int ltr = pos.toUpperCase().charAt(0) - 'A';
+        int dgt = pos.charAt(1) - '1';
+
+        return board[dgt][ltr];
+    }
+
+    public void move(Class type, ChessPiece.Color color, String position) {
+        ChessPiece p = null;
+        ChessPiece p2 = getChessPiece(position);
+
+        if(p2 != null && p2.getColor() == color) {
+            throw new IllegalChessMoveException("Invalid move!");
+        }
+        //Added pointless comment
+        outer: for(int i = 0; i < 8; i++) {
+            for(int j = 0; j < 8; j++) {
+                if(board[i][j] != null && board[i][j].getColor() == color && board[i][j].getClass() == type) {
+                    try{
+                        p = board[i][j];
+
+                        p.move(position);
+                        break outer;
+                    }catch (IllegalChessMoveException err) {
+                        p = null;
+                    }
+                }
+            }
+        }
+
+        if(p == null) {
+            throw new IllegalChessMoveException("Invalid move!");
+        }
     }
 
     public void move(String oldPosition, String newPosition) {
