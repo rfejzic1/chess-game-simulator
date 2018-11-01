@@ -56,6 +56,7 @@ public class Board {
             throw new IllegalChessMoveException("Invalid move!");
         }
         //Added pointless comment
+        //Another pointless comment :)
         outer: for(int i = 0; i < 8; i++) {
             for(int j = 0; j < 8; j++) {
                 if(board[i][j] != null && board[i][j].getColor() == color && board[i][j].getClass() == type) {
