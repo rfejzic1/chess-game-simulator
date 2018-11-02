@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="512d22f7-bdc9-4b31-a594-a5d58863c7ad" name="Default Changelist" comment="" />
+    <list default="true" id="512d22f7-bdc9-4b31-a594-a5d58863c7ad" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/ChessPiece.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,36 +46,37 @@
     <session id="-130153211">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.15" value="2" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="48" />
+          <entry key="java" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="48" />
+          <entry key="JAVA" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="java" value="4708" />
-          <entry key="txt" value="755" />
+          <entry key="java" value="4873" />
+          <entry key="txt" value="766" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4708" />
-          <entry key="PLAIN_TEXT" value="759" />
+          <entry key="JAVA" value="4873" />
+          <entry key="PLAIN_TEXT" value="770" />
         </counts>
       </usages-collector>
     </session>
@@ -81,11 +86,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="68" column="21" lean-forward="true" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+            <state relative-caret-position="153">
+              <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
               <folding>
-                <element signature="method#Board#0;class#Board#0" />
-                <element signature="method#getChessPiece#0;class#Board#0" />
+                <element signature="e#2961#2962#0" expanded="true" />
+                <element signature="e#2989#2990#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,8 +139,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -322,19 +327,17 @@
       <option name="project" value="LOCAL" />
       <updated>1541016613529</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Dodao jos jedan komentar;">
+      <created>1541093737029</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1541093737030</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_rpr-zadaca1 - 2018.10.27 at 14h 18m 10s.xml">
-      <configuration name="All in rpr-zadaca1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_rpr-zadaca1 - 2018.10.27 at 14h 46m 47s.xml">
-      <configuration name="All in rpr-zadaca1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_rpr-zadaca1 - 2018.10.27 at 16h 11m 20s.xml">
-      <configuration name="All in rpr-zadaca1" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_rpr-zadaca1 - 2018.10.27 at 16h 20m 03s.xml">
       <configuration name="All in rpr-zadaca1" configurationId="JUnit" />
     </history-entry>
@@ -356,12 +359,21 @@
     <history-entry file="All_in_rpr-zadaca1 - 2018.10.27 at 19h 08m 02s.xml">
       <configuration name="All in rpr-zadaca1" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_rpr-zadaca1 - 2018.11.02 at 22h 10m 56s.xml">
+      <configuration name="All in rpr-zadaca1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_rpr-zadaca1 - 2018.11.02 at 22h 12m 43s.xml">
+      <configuration name="All in rpr-zadaca1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_rpr-zadaca1 - 2018.11.02 at 22h 13m 03s.xml">
+      <configuration name="All in rpr-zadaca1" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22541603" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2322239" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -370,7 +382,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32996634" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -432,7 +444,8 @@
     <MESSAGE value="Yup, klasa se trebala zvati Rook, a ne Rock :)" />
     <MESSAGE value="U klasi ChessPiece u metodi validateArg prepravio uslov." />
     <MESSAGE value="Dodao komentar i jos neke stvari :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodao komentar i jos neke stvari :)" />
+    <MESSAGE value="Dodao jos jedan komentar;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodao jos jedan komentar;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Tst.java" />
@@ -527,8 +540,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/ChessPiece.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="204">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
             <element signature="method#move#0;class#ChessPiece#0" />
             <element signature="method#validateArg#0;class#ChessPiece#0" />
@@ -538,11 +551,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="68" column="21" lean-forward="true" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+        <state relative-caret-position="153">
+          <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
           <folding>
-            <element signature="method#Board#0;class#Board#0" />
-            <element signature="method#getChessPiece#0;class#Board#0" />
+            <element signature="e#2961#2962#0" expanded="true" />
+            <element signature="e#2989#2990#0" expanded="true" />
           </folding>
         </state>
       </provider>

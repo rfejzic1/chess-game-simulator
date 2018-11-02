@@ -8,7 +8,6 @@ public abstract class ChessPiece {
 
     public ChessPiece(String pos, Color clr) {
         validateArg(pos);
-        //validatePosition(pos);
         color = clr;
         position = pos;
     }
