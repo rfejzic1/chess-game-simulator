@@ -17,7 +17,6 @@ public class Queen extends ChessPiece {
         int ltrDif = abs(cLtr - ltr);
         int dgtDif = abs(cDgt - dgt);
 
-
         //ltrDif == 0 || dgtDiff == 0 || ltrDif == dgtDif su ispravne pozicije, moze na istu poziciju?
         if(ltrDif != 0 && dgtDif != 0 && ltrDif != dgtDif)
             throw new IllegalChessMoveException("Illegal move!");
