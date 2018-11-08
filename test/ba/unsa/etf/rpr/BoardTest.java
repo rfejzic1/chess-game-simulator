@@ -10,7 +10,7 @@ class BoardTest {
     // Is the board usable after isCheck
     void someLegalMoves() {
         Board b = new Board();
-        boolean no = b.isCheck(ChessPiece.Color.WHITE);
+        //boolean no = b.isCheck(ChessPiece.Color.WHITE);
         assertDoesNotThrow(
                 () -> {
                     b.move(Pawn.class, ChessPiece.Color.WHITE, "E4");

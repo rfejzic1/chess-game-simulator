@@ -17,6 +17,7 @@ public class Pawn extends ChessPiece {
         int ltrDif = abs(cLtr - ltr);
         int dgtDif = abs(cDgt - dgt);
 
+        //Mora Pawn jesti dijagonalno
         if(ltrDif != 0)
             throw new IllegalChessMoveException("Illegal move!");
 
