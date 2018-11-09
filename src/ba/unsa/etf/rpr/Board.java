@@ -62,15 +62,23 @@ public class Board {
         int ltrDif = bLtr - aLtr;
         int dgtDif = bDgt - aDgt;
 
-        int lChange = Integer.signum(Integer.compare(ltrDif, 0));
-        int dChange = Integer.signum(Integer.compare(dgtDif, 0));
+        int lChange = Integer.signum(Integer.compare(0, ltrDif));
+        int dChange = Integer.signum(Integer.compare(0, dgtDif));
+
+
+//        System.out.println("lC: " + lChange + "; dC: " + dChange);
 
         //Do not check position b, a will not be checked anyways
         ltrDif += lChange;
         dgtDif += dChange;
 
+//        System.out.println(a + " - > " + b);
+
         while(ltrDif != 0 || dgtDif != 0) {
             String currPos = "" + (char)(bLtr - ltrDif) + (char)(bDgt - dgtDif);
+
+//            System.out.println(currPos);
+
             if(getChessPiece(currPos) != null)
                 return false;
 
@@ -99,9 +107,9 @@ public class Board {
         for(int i = 0; i < board.size(); i++) {
             ChessPiece curr = board.get(i);
 
-            if(curr.getColor() == color && curr.getClass() == type) {
+            if(curr.getColor() == color && (curr.getClass() == type)) {
                 String initPos = curr.getPosition();
-                System.out.println(initPos + " -> " + position + " : " + curr.getClass().getName());
+//                System.out.println(initPos + " -> " + position + " : " + curr.getClass().getName() + " should be " + type.getName() );
 
                 try {
                     if(type == Pawn.class) {
@@ -113,7 +121,7 @@ public class Board {
                     if(onTargetPos != null && onTargetPos.getColor() == curr.getColor())
                         throw new IllegalChessMoveException("Nemos jest svog konju!");
 
-                    if(!pathClear(curr.getClass(), curr.getPosition(), position))
+                    if(!pathClear(curr.getClass(), initPos, position))
                         throw new IllegalChessMoveException("Nemeres preskakat figure, bilmeze!");
 
                     if(onTargetPos != null){
@@ -126,7 +134,7 @@ public class Board {
                 }catch (IllegalChessMoveException err) {
                     if(!curr.getPosition().equals(initPos))
                         curr.move(initPos);
-                    System.out.println("Nemere ovaj, trazi drugi");
+//                    System.out.println("Nemere ovaj, trazi drugi");
                 }
             }
         }
@@ -164,37 +172,38 @@ public class Board {
     }
 
     public void move(String oldPosition, String newPosition) {
-//        ChessPiece curr = getChessPiece(oldPosition);
-//
-//        if(curr == null)
-//            throw new IllegalArgumentException("Illegal move!");
-//
-//        ChessPiece onTargetPos = getChessPiece(newPosition);
-//
-//        String initPos = curr.getPosition();
-//
-//        try {
-//            if(curr.getClass() == Pawn.class) {
-//                tryToMove(newPosition, onTargetPos, curr, initPos);
-//            }else {
-//                curr.move(newPosition);
-//            }
-//
-//            if(onTargetPos != null && onTargetPos.getColor() == curr.getColor())
-//                throw new IllegalChessMoveException("Illegal move!");
-//
-//            if(!pathClear(curr.getClass(), curr.getPosition(), newPosition))
-//                throw new IllegalChessMoveException("Illegal move!");
-//
-//            if(onTargetPos != null)
-//                board.remove(onTargetPos);
-//
-//            updateKingsPos(curr.getClass(), curr.getColor(), newPosition);
-//
-//        }catch (IllegalChessMoveException err) {
-//            curr.move(initPos);
-//            throw err;
-//        }
+        ChessPiece curr = getChessPiece(oldPosition);
+
+        if(curr == null)
+            throw new IllegalArgumentException("Nema tu figure!");
+
+        ChessPiece onTargetPos = getChessPiece(newPosition);
+
+        String initPos = curr.getPosition();
+//        System.out.println(initPos + " -> " + newPosition + " : " + curr.getClass().getName() + " should be " + curr.getClass().getName() );
+
+        try {
+            if(curr.getClass() == Pawn.class) {
+                checkIfCanEat((Pawn)curr);
+            }
+
+            curr.move(newPosition);
+
+            if(onTargetPos != null && onTargetPos.getColor() == curr.getColor())
+                throw new IllegalChessMoveException("Nemos jest svog konju!");
+
+            if(!pathClear(curr.getClass(), initPos, newPosition))
+                throw new IllegalChessMoveException("Nemeres preskakat figure, bilmeze!");
+
+            if(onTargetPos != null){
+                board.remove(onTargetPos);
+            }
+        }catch (IllegalChessMoveException err) {
+            if(!curr.getPosition().equals(initPos))
+                curr.move(initPos);
+//            System.out.println("Nemere ovaj, trazi drugi");
+            throw err;
+        }
     }
 
     public boolean isCheck(ChessPiece.Color color) {

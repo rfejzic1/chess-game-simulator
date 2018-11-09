@@ -56,7 +56,6 @@ public class Program {
 
             }catch (Exception err) {
                 System.out.println(err.getMessage());
-                System.out.println("Sass");
             }
         }
 
@@ -64,17 +63,7 @@ public class Program {
     }
 
     public static void main(String[] args) {
-//        start();
-
-        Board b = new Board();
-
-        b.move(Pawn.class, ChessPiece.Color.WHITE, "E4");
-        b.move(Bishop.class, ChessPiece.Color.WHITE, "A6");
-        b.move(Knight.class, ChessPiece.Color.WHITE, "C3");
-        b.move(King.class, ChessPiece.Color.WHITE, "E2");
-        b.move(King.class, ChessPiece.Color.WHITE, "E3");
-
-
+        start();
     }
 
     private static Class getType(char piece) {
@@ -94,6 +83,7 @@ public class Program {
                 break;
             case 'R':
                 toRet = Rook.class;
+                break;
             case 'P':
                 toRet = Pawn.class;
                 break;

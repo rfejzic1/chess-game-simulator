@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="512d22f7-bdc9-4b31-a594-a5d58863c7ad" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/ChessPiece.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/ChessPiece.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Pawn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Pawn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/rpr-zadaca1/ba/unsa/etf/rpr/BoardTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/rpr-zadaca1/ba/unsa/etf/rpr/BoardTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/ChessPiece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Pawn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java" afterDir="false" />
     </list>
@@ -68,52 +64,42 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="89" />
+          <entry key="java" value="91" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="89" />
+          <entry key="JAVA" value="91" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="java" value="12865" />
-          <entry key="txt" value="1406" />
+          <entry key="java" value="13147" />
+          <entry key="txt" value="1545" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12865" />
-          <entry key="PLAIN_TEXT" value="1410" />
+          <entry key="JAVA" value="13147" />
+          <entry key="PLAIN_TEXT" value="1549" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+            <state relative-caret-position="300">
+              <caret line="212" column="5" lean-forward="true" selection-start-line="212" selection-start-column="5" selection-end-line="212" selection-end-column="5" />
               <folding>
+                <element signature="method#Board#0;class#Board#0" />
                 <element signature="method#getChessPiece#0;class#Board#0" />
                 <element signature="method#pathClear#0;class#Board#0" />
                 <element signature="method#updateKingsPos#0;class#Board#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="128" column="15" lean-forward="true" selection-start-line="128" selection-start-column="15" selection-end-line="137" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#checkIfCanEat#0;class#Board#0" />
               </folding>
             </state>
           </provider>
@@ -147,9 +133,9 @@
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/ChessPiece.java" />
         <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/PawnTest.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Pawn.java" />
+        <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Program.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" />
-        <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java" />
       </list>
     </option>
   </component>
@@ -214,7 +200,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541794972325" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541797485703" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -235,7 +221,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BoardTest.jumpPiece">
+  <component name="RunManager" selected="Application.Program">
     <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.Program" />
       <module name="rpr-zadaca1" />
@@ -273,6 +259,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BoardTest.jumpPiece1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpr-zadaca1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.unsa.etf.rpr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
+      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.BoardTest" />
+      <option name="METHOD_NAME" value="jumpPiece1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BoardTest.someLegalMoves" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpr-zadaca1" />
       <extension name="coverage">
@@ -289,34 +291,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ba.unsa.etf.rpr in rpr-zadaca1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rpr-zadaca1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ba.unsa.etf.rpr.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="JUnit.All in rpr-zadaca1" />
       <item itemvalue="Application.Program" />
-      <item itemvalue="JUnit.ba.unsa.etf.rpr in rpr-zadaca1" />
       <item itemvalue="JUnit.BoardTest.someLegalMoves" />
       <item itemvalue="JUnit.BoardTest.jumpPiece" />
+      <item itemvalue="JUnit.BoardTest.jumpPiece1" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BoardTest.jumpPiece" />
-        <item itemvalue="JUnit.All in rpr-zadaca1" />
-        <item itemvalue="JUnit.BoardTest.someLegalMoves" />
         <item itemvalue="Application.Program" />
-        <item itemvalue="JUnit.ba.unsa.etf.rpr in rpr-zadaca1" />
+        <item itemvalue="JUnit.All in rpr-zadaca1" />
+        <item itemvalue="JUnit.BoardTest.jumpPiece1" />
+        <item itemvalue="JUnit.BoardTest.jumpPiece" />
+        <item itemvalue="JUnit.BoardTest.someLegalMoves" />
       </list>
     </recent_temporary>
   </component>
@@ -331,7 +319,7 @@
       <option name="presentableId" value="Default" />
       <updated>1540559850814</updated>
       <workItem from="1541718521942" duration="550000" />
-      <workItem from="1541776959498" duration="11310000" />
+      <workItem from="1541776959498" duration="13812000" />
     </task>
     <task id="LOCAL-00001" summary="Dodao klase i implementovao ChessPiece">
       <created>1540636193187</created>
@@ -431,31 +419,17 @@
       <option name="project" value="LOCAL" />
       <updated>1541780802056</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Popravio 1. metodu move u Board-u. Popravio Pawn.&#10;Dodao da se moze pod uslovom 'canEat' jesi, sto odredjuje tabla za tu figuru!">
+      <created>1541795041308</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1541795041308</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ba_unsa_etf_rpr_in_rpr-zadaca1 - 2018.11.09 at 21h 10m 27s.xml">
-      <configuration name="ba.unsa.etf.rpr in rpr-zadaca1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_rpr-zadaca1 - 2018.11.09 at 21h 13m 54s.xml">
-      <configuration name="All in rpr-zadaca1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_someLegalMoves - 2018.11.09 at 21h 16m 25s.xml">
-      <configuration name="BoardTest.someLegalMoves" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_someLegalMoves - 2018.11.09 at 21h 16m 35s.xml">
-      <configuration name="BoardTest.someLegalMoves" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_someLegalMoves - 2018.11.09 at 21h 18m 45s.xml">
-      <configuration name="BoardTest.someLegalMoves" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_someLegalMoves - 2018.11.09 at 21h 18m 52s.xml">
-      <configuration name="BoardTest.someLegalMoves" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_someLegalMoves - 2018.11.09 at 21h 19m 00s.xml">
-      <configuration name="BoardTest.someLegalMoves" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BoardTest_someLegalMoves - 2018.11.09 at 21h 19m 06s.xml">
       <configuration name="BoardTest.someLegalMoves" configurationId="JUnit" />
     </history-entry>
@@ -465,9 +439,30 @@
     <history-entry file="BoardTest_jumpPiece - 2018.11.09 at 21h 22m 18s.xml">
       <configuration name="BoardTest.jumpPiece" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BoardTest_jumpPiece - 2018.11.09 at 21h 52m 45s.xml">
+      <configuration name="BoardTest.jumpPiece" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_jumpPiece - 2018.11.09 at 21h 53m 02s.xml">
+      <configuration name="BoardTest.jumpPiece" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_rpr-zadaca1 - 2018.11.09 at 21h 53m 06s.xml">
+      <configuration name="All in rpr-zadaca1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_jumpPiece1 - 2018.11.09 at 21h 55m 55s.xml">
+      <configuration name="BoardTest.jumpPiece1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_jumpPiece1 - 2018.11.09 at 22h 02m 30s.xml">
+      <configuration name="BoardTest.jumpPiece1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_rpr-zadaca1 - 2018.11.09 at 22h 02m 36s.xml">
+      <configuration name="All in rpr-zadaca1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_rpr-zadaca1 - 2018.11.09 at 22h 03m 46s.xml">
+      <configuration name="All in rpr-zadaca1" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11860000" />
+    <option name="totallyTimeSpent" value="14362000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -515,24 +510,26 @@
       <window_info anchor="right" id="Database" order="10" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23600605" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32996634" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3295082" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50075644" side_tool="true" weight="0.3295082" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3295082" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49924356" weight="0.3295082" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2549168" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Structure" order="6" weight="0.24962178" />
+      <window_info anchor="bottom" id="Extract Method" order="0" weight="0.3295082" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32996634" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.31967214" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.3295082" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3295082" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3295082" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49924356" weight="0.3295082" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -543,6 +540,7 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="right" id="Flutter Inspector" order="8" />
       <window_info anchor="right" id="Flutter Outline" order="9" />
+      <window_info anchor="right" id="Database" order="10" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,7 +564,8 @@
     <MESSAGE value="Popravio Pawn. Popravio Board. Pada sve opet :)" />
     <MESSAGE value="Ubacio dodatne profesorove testove. Implementacija main-a." />
     <MESSAGE value="Implementovao Program. Popravio BoardTest." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementovao Program. Popravio BoardTest." />
+    <MESSAGE value="Popravio 1. metodu move u Board-u. Popravio Pawn.&#10;Dodao da se moze pod uslovom 'canEat' jesi, sto odredjuje tabla za tu figuru!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Popravio 1. metodu move u Board-u. Popravio Pawn.&#10;Dodao da se moze pod uslovom 'canEat' jesi, sto odredjuje tabla za tu figuru!" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Tst.java" />
@@ -634,17 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="71" column="59" lean-forward="true" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
-          <folding>
-            <element signature="method#start#0;class#Program#0" />
-            <element signature="method#getType#0;class#Program#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Pawn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
@@ -652,24 +640,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java">
+    <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+        <state relative-caret-position="71">
+          <caret line="228" column="32" lean-forward="true" selection-start-line="228" selection-start-column="32" selection-end-line="228" selection-end-column="32" />
           <folding>
-            <element signature="method#getChessPiece#0;class#Board#0" />
-            <element signature="method#pathClear#0;class#Board#0" />
-            <element signature="method#updateKingsPos#0;class#Board#0" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java">
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="128" column="15" lean-forward="true" selection-start-line="128" selection-start-column="15" selection-end-line="137" selection-end-column="17" />
+        <state relative-caret-position="170">
+          <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Program#0" />
+            <element signature="e#1873#1874#0" expanded="true" />
+            <element signature="e#1896#1897#0" expanded="true" />
+            <element signature="method#getType#0;class#Program#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="212" column="5" lean-forward="true" selection-start-line="212" selection-start-column="5" selection-end-line="212" selection-end-column="5" />
+          <folding>
+            <element signature="method#Board#0;class#Board#0" />
+            <element signature="method#getChessPiece#0;class#Board#0" />
+            <element signature="method#pathClear#0;class#Board#0" />
+            <element signature="method#updateKingsPos#0;class#Board#0" />
+            <element signature="method#checkIfCanEat#0;class#Board#0" />
           </folding>
         </state>
       </provider>
