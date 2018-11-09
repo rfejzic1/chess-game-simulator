@@ -13,6 +13,18 @@ public class Pawn extends ChessPiece {
         this._canEat = canEat;
     }
 
+    void checkDiag(int ltrDif) {
+        if(_canEat) {
+            if(ltrDif != 0 && ltrDif != 1) {
+                throw new IllegalChessMoveException("Illegal move!");
+            }
+        }else {
+            if(ltrDif != 0) {
+                throw new IllegalChessMoveException("Illegal move!");
+            }
+        }
+    }
+
     @Override
     public void validatePosition(String position) {
         char cLtr = getPosition().charAt(0);
@@ -34,15 +46,7 @@ public class Pawn extends ChessPiece {
                 if(dgtDif > 1 || dgtDif <= 0)
                     throw new IllegalChessMoveException("Illegal move!");
 
-                if(_canEat) {
-                    if((ltrDif != 0 && ltrDif != 1)) {
-                        throw new IllegalChessMoveException("Illegal move!");
-                    }
-                }else {
-                    if(ltrDif != 0) {
-                        throw new IllegalChessMoveException("Illegal move!");
-                    }
-                }
+                checkDiag(ltrDif);
             }
         }else if(getColor() == Color.BLACK) {
             if(cDgt == '7') {
@@ -55,15 +59,7 @@ public class Pawn extends ChessPiece {
                 if(dgtDif < -1 || dgtDif >= 0)
                     throw new IllegalChessMoveException("Illegal move!");
 
-                if(_canEat) {
-                    if((ltrDif != 0 && ltrDif != 1)) {
-                        throw new IllegalChessMoveException("Illegal move!");
-                    }
-                }else {
-                    if(ltrDif != 0) {
-                        throw new IllegalChessMoveException("Illegal move!");
-                    }
-                }
+                checkDiag(ltrDif);
             }
         }
 
