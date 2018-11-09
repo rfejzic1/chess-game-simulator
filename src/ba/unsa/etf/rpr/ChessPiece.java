@@ -9,7 +9,7 @@ public abstract class ChessPiece {
     public ChessPiece(String pos, Color clr) {
         validateArg(pos);
         color = clr;
-        position = pos;
+        position = "" + pos.toUpperCase().charAt(0) + pos.charAt(1);
     }
 
     public String getPosition() {
@@ -23,7 +23,7 @@ public abstract class ChessPiece {
     public void move(String position) {
         validateArg(position);
         validatePosition(position);
-        this.position = position;
+        this.position = "" + position.toUpperCase().charAt(0) + position.charAt(1);
     }
 
     public static void validateArg(String pos) {

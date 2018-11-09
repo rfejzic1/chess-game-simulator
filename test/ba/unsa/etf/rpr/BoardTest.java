@@ -125,11 +125,13 @@ class BoardTest {
                 () -> assertThrows(
                         IllegalChessMoveException.class,
                         () -> b.move(Rook.class, ChessPiece.Color.BLACK, "H6")
-                ),
+                )
+                ,
                 () -> assertThrows(
                         IllegalChessMoveException.class,
                         () -> b.move(Bishop.class, ChessPiece.Color.BLACK, "H6")
-                ),
+                )
+                ,
                 () -> assertThrows(
                         IllegalChessMoveException.class,
                         () -> b.move(Queen.class, ChessPiece.Color.BLACK, "A5")

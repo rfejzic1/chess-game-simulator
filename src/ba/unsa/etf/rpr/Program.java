@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Program {
 
-    public static void main(String[] args) {
+    private static void start() {
         Board b = new Board();
         ChessPiece.Color turn = ChessPiece.Color.WHITE;
         Scanner sc = new Scanner(System.in);
@@ -56,11 +56,25 @@ public class Program {
 
             }catch (Exception err) {
                 System.out.println(err.getMessage());
+                System.out.println("Sass");
             }
         }
 
-        System.out.println();
         System.out.println("End");
+    }
+
+    public static void main(String[] args) {
+//        start();
+
+        Board b = new Board();
+
+        b.move(Pawn.class, ChessPiece.Color.WHITE, "E4");
+        b.move(Bishop.class, ChessPiece.Color.WHITE, "A6");
+        b.move(Knight.class, ChessPiece.Color.WHITE, "C3");
+        b.move(King.class, ChessPiece.Color.WHITE, "E2");
+        b.move(King.class, ChessPiece.Color.WHITE, "E3");
+
+
     }
 
     private static Class getType(char piece) {

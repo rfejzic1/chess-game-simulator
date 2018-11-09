@@ -3,26 +3,18 @@ package ba.unsa.etf.rpr;
 import static java.lang.Math.abs;
 
 public class Pawn extends ChessPiece {
-        private boolean _canEat = false;
+    private int _canEat = 0;
+    private boolean canRet = false;
 
     public Pawn(String position, Color color) {
         super(position, color);
     }
 
-    public void canEat(boolean canEat) {
+    public void canEat(int canEat) {
         this._canEat = canEat;
     }
-
-    void checkDiag(int ltrDif) {
-        if(_canEat) {
-            if(ltrDif != 0 && ltrDif != 1) {
-                throw new IllegalChessMoveException("Illegal move!");
-            }
-        }else {
-            if(ltrDif != 0) {
-                throw new IllegalChessMoveException("Illegal move!");
-            }
-        }
+    public void canRet(boolean canRet) {
+        this.canRet = canRet;
     }
 
     @Override
@@ -32,36 +24,63 @@ public class Pawn extends ChessPiece {
         char ltr = position.toUpperCase().charAt(0);
         char dgt = position.charAt(1);
 
-        int ltrDif = abs(cLtr - ltr);
+        int ltrDif = ltr - cLtr;
         int dgtDif = dgt - cDgt;
 
         if(getColor() == Color.WHITE) {
             if(cDgt == '2') {
-                if (dgtDif > 2 || dgtDif <= 0)
-                    throw new IllegalChessMoveException("Illegal move!");
-                if(ltrDif != 0) {
-                    throw new IllegalChessMoveException("Illegal move!");
+                if(dgtDif == 2) {
+                    if(ltrDif != 0)
+                        throw new IllegalChessMoveException("Tu mač bijelog!");
+                }else{
+                    stepWhite(ltrDif, dgtDif);
                 }
             } else {
-                if(dgtDif > 1 || dgtDif <= 0)
-                    throw new IllegalChessMoveException("Illegal move!");
-
-                checkDiag(ltrDif);
+                stepWhite(ltrDif, dgtDif);
             }
-        }else if(getColor() == Color.BLACK) {
+        }else {
             if(cDgt == '7') {
-                if (dgtDif < -2 || dgtDif >= 0)
-                    throw new IllegalChessMoveException("Illegal move!");
-                if(ltrDif != 0) {
-                    throw new IllegalChessMoveException("Illegal move!");
+                if(dgtDif == -2 ) {
+                    if(ltrDif != 0)
+                        throw new IllegalChessMoveException("Tu mač crnog!");
+                }else {
+                    stepBlack(ltrDif, dgtDif);
                 }
             } else {
-                if(dgtDif < -1 || dgtDif >= 0)
-                    throw new IllegalChessMoveException("Illegal move!");
-
-                checkDiag(ltrDif);
+                stepBlack(ltrDif, dgtDif);
             }
         }
+    }
 
+    private void stepBlack(int ltrDif, int dgtDif) {
+        if(dgtDif == -1){
+            step(ltrDif);
+        }else {
+            throw new IllegalChessMoveException("Nemere crni u rikvertz!");
+        }
+    }
+
+    private void step(int ltrDif) {
+        if(_canEat == -1) {
+            if(ltrDif != -1 && ltrDif != 0)
+                throw new IllegalChessMoveException("Nemere desno jest");
+        }else if(_canEat == 1) {
+            if(ltrDif != 1 && ltrDif != 0)
+                throw new IllegalChessMoveException("Nemere ljevo jest");
+        }else if(_canEat == 2){
+            if(ltrDif != -1 && ltrDif != 0 && ltrDif != 1)
+                throw new IllegalChessMoveException("Mogo jest a ne valja polje");
+        }else {
+            if(ltrDif != 0)
+                throw new IllegalChessMoveException("Nemere jest");
+        }
+    }
+
+    private void stepWhite(int ltrDif, int dgtDif) {
+        if(dgtDif == 1){
+            step(ltrDif);
+        }else {
+            throw new IllegalChessMoveException("Nemere bjeli u rikvertz!");
+        }
     }
 }

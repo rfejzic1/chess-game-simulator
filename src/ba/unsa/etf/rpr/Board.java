@@ -19,9 +19,9 @@ public class Board {
         board.add(new Queen("D1", ChessPiece.Color.WHITE));
         board.add(new King("E1", ChessPiece.Color.WHITE));
         wKingPos = "E1";
-        board.add(new Rook("F1", ChessPiece.Color.WHITE));
+        board.add(new Bishop("F1", ChessPiece.Color.WHITE));
         board.add(new Knight("G1", ChessPiece.Color.WHITE));
-        board.add(new Bishop("H1", ChessPiece.Color.WHITE));
+        board.add(new Rook("H1", ChessPiece.Color.WHITE));
 
         //Populate Black pieces
         for(int i = 0; i < 8; i++) {
@@ -36,9 +36,9 @@ public class Board {
         board.add(new Queen("D8", ChessPiece.Color.BLACK));
         board.add(new King("E8", ChessPiece.Color.BLACK));
         bKingPos = "E8";
-        board.add(new Rook("F8", ChessPiece.Color.BLACK));
+        board.add(new Bishop("F8", ChessPiece.Color.BLACK));
         board.add(new Knight("G8", ChessPiece.Color.BLACK));
-        board.add(new Bishop("H8", ChessPiece.Color.BLACK));
+        board.add(new Rook("H8", ChessPiece.Color.BLACK));
     }
 
     private ChessPiece getChessPiece(String position) {
@@ -101,98 +101,104 @@ public class Board {
 
             if(curr.getColor() == color && curr.getClass() == type) {
                 String initPos = curr.getPosition();
+                System.out.println(initPos + " -> " + position + " : " + curr.getClass().getName());
 
                 try {
                     if(type == Pawn.class) {
-                        try {
-                            //Pokusaj se pokrenuti s pretpostavkom da ne jede
-                            curr.move(position);
-                        }catch (IllegalChessMoveException exc) {
-                            //Posto ne moze kretanje, provjeri da ne jede?
-                            curr.move(initPos);
-                            ((Pawn)curr).canEat(true);
-                            curr.move(position);
-                            //Ako je mogao jesti, a nema figure na tom mjestu, exception
-                            if(onTargetPos == null)
-                                throw new IllegalChessMoveException("Illegal move!");
-                        }
-                    }else {
-                        curr.move(position);
+                        checkIfCanEat((Pawn)curr);
                     }
 
+                    curr.move(position);
+
                     if(onTargetPos != null && onTargetPos.getColor() == curr.getColor())
-                        throw new IllegalChessMoveException("Illegal move!");
+                        throw new IllegalChessMoveException("Nemos jest svog konju!");
 
                     if(!pathClear(curr.getClass(), curr.getPosition(), position))
-                        throw new IllegalChessMoveException("Illegal move!");
-
-                    if(isCheck(curr.getColor()))
-                        throw new IllegalChessMoveException("Illegal move!");
+                        throw new IllegalChessMoveException("Nemeres preskakat figure, bilmeze!");
 
                     if(onTargetPos != null){
                         board.remove(onTargetPos);
-                        found = true;
-                        updateKingsPos(curr.getClass(), curr.getColor(), position);
-                        break;
                     }
+
+                    //Proslo sve, nema izuzetaka nikakvih, izadji iz petlje
+                    found = true;
+                    break;
                 }catch (IllegalChessMoveException err) {
-                    curr.move(initPos);
+                    if(!curr.getPosition().equals(initPos))
+                        curr.move(initPos);
+                    System.out.println("Nemere ovaj, trazi drugi");
                 }
             }
         }
-        if(!found)
-            throw new IllegalChessMoveException("Illegal move!");
+
+        if(!found) {
+            throw new IllegalChessMoveException("No Bič faund!");
+        }
+    }
+
+    private void checkIfCanEat(Pawn pawn) {
+        String lDiag = "", rDiag = "";
+
+        if(pawn.getColor() == ChessPiece.Color.WHITE) {
+            lDiag += (char)(pawn.getPosition().charAt(0) - 1) + (char)(pawn.getPosition().charAt(1) + 1);
+            rDiag += (char)(pawn.getPosition().charAt(0) + 1) + (char)(pawn.getPosition().charAt(1) + 1);
+        }else {
+            lDiag += (char)(pawn.getPosition().charAt(0) - 1) + (char)(pawn.getPosition().charAt(1) - 1);
+            rDiag += (char)(pawn.getPosition().charAt(0) + 1) + (char)(pawn.getPosition().charAt(1) - 1);
+        }
+        int canEat = 0;
+        ChessPiece lPiece = getChessPiece(lDiag);
+        ChessPiece rPiece = getChessPiece(rDiag);
+
+        if(lPiece == null){
+            canEat = -1;
+            if(rPiece == null)
+                canEat = 2;
+        }else {
+            canEat = 0;
+            if(rPiece == null)
+                canEat = 1;
+        }
+
+        pawn.canEat(canEat);
     }
 
     public void move(String oldPosition, String newPosition) {
-        ChessPiece curr = getChessPiece(oldPosition);
-
-        if(curr == null)
-            throw new IllegalArgumentException("Illegal move!");
-
-        ChessPiece onTargetPos = getChessPiece(newPosition);
-
-        String initPos = curr.getPosition();
-
-        try {
-            if(curr.getClass() == Pawn.class) {
-                try {
-                    //Pokusaj se pokrenuti s pretpostavkom da ne jede
-                    curr.move(newPosition);
-                }catch (IllegalChessMoveException exc) {
-                    //Posto ne moze kretanje, provjeri da ne jede?
-                    curr.move(initPos);
-                    ((Pawn)curr).canEat(true);
-                    curr.move(newPosition);
-                    //Ako je mogao jesti, a nema figure na tom mjestu, exception
-                    if(onTargetPos == null)
-                        throw new IllegalChessMoveException("Illegal move!");
-                }
-            }else {
-                curr.move(newPosition);
-            }
-
-            if(onTargetPos != null && onTargetPos.getColor() == curr.getColor())
-                throw new IllegalChessMoveException("Illegal move!");
-
-            if(!pathClear(curr.getClass(), curr.getPosition(), newPosition))
-                throw new IllegalChessMoveException("Illegal move!");
-
-            if(onTargetPos != null)
-                board.remove(onTargetPos);
-
-            updateKingsPos(curr.getClass(), curr.getColor(), newPosition);
-
-        }catch (IllegalChessMoveException err) {
-            curr.move(initPos);
-            throw err;
-        }
+//        ChessPiece curr = getChessPiece(oldPosition);
+//
+//        if(curr == null)
+//            throw new IllegalArgumentException("Illegal move!");
+//
+//        ChessPiece onTargetPos = getChessPiece(newPosition);
+//
+//        String initPos = curr.getPosition();
+//
+//        try {
+//            if(curr.getClass() == Pawn.class) {
+//                tryToMove(newPosition, onTargetPos, curr, initPos);
+//            }else {
+//                curr.move(newPosition);
+//            }
+//
+//            if(onTargetPos != null && onTargetPos.getColor() == curr.getColor())
+//                throw new IllegalChessMoveException("Illegal move!");
+//
+//            if(!pathClear(curr.getClass(), curr.getPosition(), newPosition))
+//                throw new IllegalChessMoveException("Illegal move!");
+//
+//            if(onTargetPos != null)
+//                board.remove(onTargetPos);
+//
+//            updateKingsPos(curr.getClass(), curr.getColor(), newPosition);
+//
+//        }catch (IllegalChessMoveException err) {
+//            curr.move(initPos);
+//            throw err;
+//        }
     }
 
     public boolean isCheck(ChessPiece.Color color) {
         String currKing = (color == ChessPiece.Color.WHITE)? wKingPos : bKingPos;
-
-
 
         return false;
     }
