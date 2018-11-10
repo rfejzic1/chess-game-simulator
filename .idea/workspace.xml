@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="512d22f7-bdc9-4b31-a594-a5d58863c7ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/QueenTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Bishop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Bishop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/ChessPiece.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/ChessPiece.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Knight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Knight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Pawn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Pawn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Queen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Queen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Rook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr-zadaca1/ba/unsa/etf/rpr/Rook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/rpr-zadaca1/ba/unsa/etf/rpr/KingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/rpr-zadaca1/ba/unsa/etf/rpr/KingTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/rpr-zadaca1/ba/unsa/etf/rpr/KnightTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/rpr-zadaca1/ba/unsa/etf/rpr/KnightTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/rpr-zadaca1/ba/unsa/etf/rpr/BoardTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/rpr-zadaca1/ba/unsa/etf/rpr/BoardTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/rpr-zadaca1/ba/unsa/etf/rpr/PawnTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/rpr-zadaca1/ba/unsa/etf/rpr/PawnTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/KingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/KingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/KnightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/KnightTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/PawnTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/PawnTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +22,7 @@
     <SUITE FILE_PATH="coverage/rpr_zadaca1$BoardTest_boardTest1.ic" NAME="BoardTest.boardTest1 Coverage Results" MODIFIED="1541859104971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ba.unsa.etf.rpr.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/rpr_zadaca1$All_in_rpr_zadaca1.ic" NAME="All in rpr-zadaca1 Coverage Results" MODIFIED="1541861283357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/rpr_zadaca1$All_in_rpr_zadaca1.ic" NAME="All in rpr-zadaca1 Coverage Results" MODIFIED="1541874380680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/rpr_zadaca1$_engine_junit_jupiter___class_ba_unsa_etf_rpr_BoardTest_.ic" NAME="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest] Coverage Results" MODIFIED="1541854777494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/rpr_zadaca1$Program.ic" NAME="Program Coverage Results" MODIFIED="1541856247372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ba.unsa.etf.rpr.*</FILTER>
@@ -93,25 +82,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="120" />
+          <entry key="java" value="125" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="120" />
+          <entry key="JAVA" value="125" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="java" value="14514" />
-          <entry key="txt" value="1717" />
+          <entry key="java" value="17036" />
+          <entry key="txt" value="1836" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14514" />
-          <entry key="PLAIN_TEXT" value="1721" />
+          <entry key="JAVA" value="17036" />
+          <entry key="PLAIN_TEXT" value="1840" />
         </counts>
       </usages-collector>
     </session>
@@ -119,14 +108,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java">
+        <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="168" column="49" selection-start-line="168" selection-start-column="49" selection-end-line="168" selection-end-column="49" />
+            <state relative-caret-position="147">
+              <caret line="147" column="30" lean-forward="true" selection-start-line="147" selection-start-column="30" selection-end-line="147" selection-end-column="30" />
               <folding>
-                <element signature="method#Board#0;class#Board#0" />
-                <element signature="method#getChessPiece#0;class#Board#0" />
-                <element signature="method#pathClear#0;class#Board#0" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#wPawnCanEat#0;class#BoardTest#0" />
               </folding>
             </state>
           </provider>
@@ -141,6 +129,11 @@
         <option value="JUnit5 Test Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>King</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -165,8 +158,8 @@
         <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/KingTest.java" />
         <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/QueenTest.java" />
         <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/PawnTest.java" />
-        <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java" />
+        <option value="$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java" />
       </list>
     </option>
   </component>
@@ -238,7 +231,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541861336886" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541874422792" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="extract.method.default.visibility" value="private" />
@@ -278,7 +271,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BoardTest.pawnCanNotEat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BoardTest.isCheck1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpr-zadaca1" />
       <extension name="coverage">
         <pattern>
@@ -288,13 +281,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
       <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.BoardTest" />
-      <option name="METHOD_NAME" value="pawnCanNotEat" />
+      <option name="METHOD_NAME" value="isCheck1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BoardTest.pawnDiagonal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BoardTest.isCheckKnight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpr-zadaca1" />
       <extension name="coverage">
         <pattern>
@@ -304,29 +297,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
       <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.BoardTest" />
-      <option name="METHOD_NAME" value="pawnDiagonal" />
+      <option name="METHOD_NAME" value="isCheckKnight" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PawnTest.noHorseMove3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rpr-zadaca1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ba.unsa.etf.rpr.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
-      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.PawnTest" />
-      <option name="METHOD_NAME" value="noHorseMove3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest] (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BoardTest.someLegalMovesB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpr-zadaca1" />
       <extension name="coverage">
         <pattern>
@@ -336,7 +313,15 @@
       </extension>
       <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
       <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.BoardTest" />
-      <option name="METHOD_NAME" value="pawnDiagonal" />
+      <option name="METHOD_NAME" value="someLegalMovesB" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest]" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpr-zadaca1" />
+      <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="uniqueId" />
       <uniqueIds>
         <uniqueId value="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest]" />
@@ -347,18 +332,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in rpr-zadaca1" />
-      <item itemvalue="JUnit.BoardTest.pawnDiagonal" />
-      <item itemvalue="JUnit.[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest] (1)" />
-      <item itemvalue="JUnit.PawnTest.noHorseMove3" />
-      <item itemvalue="JUnit.BoardTest.pawnCanNotEat" />
+      <item itemvalue="JUnit.BoardTest.isCheck1" />
+      <item itemvalue="JUnit.[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest]" />
+      <item itemvalue="JUnit.BoardTest.isCheckKnight" />
+      <item itemvalue="JUnit.BoardTest.someLegalMovesB" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in rpr-zadaca1" />
-        <item itemvalue="JUnit.BoardTest.pawnCanNotEat" />
-        <item itemvalue="JUnit.PawnTest.noHorseMove3" />
-        <item itemvalue="JUnit.[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest] (1)" />
-        <item itemvalue="JUnit.BoardTest.pawnDiagonal" />
+        <item itemvalue="JUnit.BoardTest.someLegalMovesB" />
+        <item itemvalue="JUnit.BoardTest.isCheckKnight" />
+        <item itemvalue="JUnit.[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest]" />
+        <item itemvalue="JUnit.BoardTest.isCheck1" />
       </list>
     </recent_temporary>
   </component>
@@ -375,7 +360,7 @@
       <workItem from="1541718521942" duration="550000" />
       <workItem from="1541776959498" duration="14957000" />
       <workItem from="1541854298980" duration="2006000" />
-      <workItem from="1541857955492" duration="3319000" />
+      <workItem from="1541857955492" duration="12088000" />
     </task>
     <task id="LOCAL-00001" summary="Dodao klase i implementovao ChessPiece">
       <created>1540636193187</created>
@@ -496,43 +481,50 @@
       <option name="project" value="LOCAL" />
       <updated>1541855237054</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Popravio Pawn kretanje i jedenje u Board klasi. Dodao mnogo testova.&#10;Pokrivenost 100% bez Program klase.">
+      <created>1541861404857</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1541861404857</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BoardTest_pawnDiagonal - 2018.11.10 at 15h 41m 04s.xml">
-      <configuration name="BoardTest.pawnDiagonal" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="[engine_junit-jupiter]_[class_ba_unsa_etf_rpr_BoardTest]_(1) - 2018.11.10 at 15h 41m 28s.xml">
-      <configuration name="[engine:junit-jupiter]/[class:ba.unsa.etf.rpr.BoardTest] (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_rpr-zadaca1 - 2018.11.10 at 15h 41m 42s.xml">
+    <history-entry file="All_in_rpr-zadaca1 - 2018.11.10 at 19h 14m 10s.xml">
       <configuration name="All in rpr-zadaca1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_rpr-zadaca1 - 2018.11.10 at 15h 41m 55s.xml">
+    <history-entry file="BoardTest_isCheckKnight - 2018.11.10 at 19h 17m 34s.xml">
+      <configuration name="BoardTest.isCheckKnight" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_isCheckKnight - 2018.11.10 at 19h 19m 04s.xml">
+      <configuration name="BoardTest.isCheckKnight" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_isCheckKnight - 2018.11.10 at 19h 20m 21s.xml">
+      <configuration name="BoardTest.isCheckKnight" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_isCheckKnight - 2018.11.10 at 19h 21m 29s.xml">
+      <configuration name="BoardTest.isCheckKnight" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_rpr-zadaca1 - 2018.11.10 at 19h 21m 35s.xml">
       <configuration name="All in rpr-zadaca1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PawnTest_noHorseMove3 - 2018.11.10 at 15h 44m 18s.xml">
-      <configuration name="PawnTest.noHorseMove3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_rpr-zadaca1 - 2018.11.10 at 15h 44m 25s.xml">
+    <history-entry file="All_in_rpr-zadaca1 - 2018.11.10 at 19h 21m 58s.xml">
       <configuration name="All in rpr-zadaca1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_rpr-zadaca1 - 2018.11.10 at 15h 44m 37s.xml">
+    <history-entry file="BoardTest_someLegalMovesB - 2018.11.10 at 19h 26m 08s.xml">
+      <configuration name="BoardTest.someLegalMovesB" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_rpr-zadaca1 - 2018.11.10 at 19h 26m 15s.xml">
       <configuration name="All in rpr-zadaca1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BoardTest_pawnCanNotEat - 2018.11.10 at 15h 47m 12s.xml">
-      <configuration name="BoardTest.pawnCanNotEat" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_rpr-zadaca1 - 2018.11.10 at 15h 47m 29s.xml">
-      <configuration name="All in rpr-zadaca1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_rpr-zadaca1 - 2018.11.10 at 15h 48m 12s.xml">
+    <history-entry file="All_in_rpr-zadaca1 - 2018.11.10 at 19h 26m 36s.xml">
       <configuration name="All in rpr-zadaca1" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20832000" />
+    <option name="totallyTimeSpent" value="29601000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -547,7 +539,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26626325" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26626325" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -638,7 +630,8 @@
     <MESSAGE value="Popravio 1. metodu move u Board-u. Popravio Pawn.&#10;Dodao da se moze pod uslovom 'canEat' jesi, sto odredjuje tabla za tu figuru!" />
     <MESSAGE value="U Board popravio implementacije metoda clearPath, obije varijante move." />
     <MESSAGE value="Ispravio poruke kod bacanja izuzetaka. Obrisao suvisne komentare." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ispravio poruke kod bacanja izuzetaka. Obrisao suvisne komentare." />
+    <MESSAGE value="Popravio Pawn kretanje i jedenje u Board klasi. Dodao mnogo testova.&#10;Pokrivenost 100% bez Program klase." />
+    <option name="LAST_COMMIT_MESSAGE" value="Popravio Pawn kretanje i jedenje u Board klasi. Dodao mnogo testova.&#10;Pokrivenost 100% bez Program klase." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Tst.java" />
@@ -699,13 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/ChessPiece.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Knight.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -743,17 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#wPawnCanEat#0;class#BoardTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Pawn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
@@ -763,12 +738,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="168" column="49" selection-start-line="168" selection-start-column="49" selection-end-line="168" selection-end-column="49" />
+        <state relative-caret-position="142">
+          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#Board#0;class#Board#0" />
             <element signature="method#getChessPiece#0;class#Board#0" />
             <element signature="method#pathClear#0;class#Board#0" />
+            <element signature="method#updateKingsPos#0;class#Board#0" />
+            <element signature="method#move#0;class#Board#0" />
+            <element signature="method#move#1;class#Board#0" />
+            <element signature="method#checkIfCanEat#0;class#Board#0" />
+            <element signature="method#isCheck#0;class#Board#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/ChessPiece.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rpr/BoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="147" column="30" lean-forward="true" selection-start-line="147" selection-start-column="30" selection-end-line="147" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#wPawnCanEat#0;class#BoardTest#0" />
           </folding>
         </state>
       </provider>

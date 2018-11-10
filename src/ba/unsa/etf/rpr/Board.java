@@ -1,9 +1,12 @@
 package ba.unsa.etf.rpr;
 
+import java.awt.desktop.QuitEvent;
 import java.util.ArrayList;
+import java.util.concurrent.BlockingDeque;
 
 public class Board {
     private ArrayList<ChessPiece> board = new ArrayList<>();
+    private String wKingPos, bKingPos;
 
     public Board() {
         //Populate White pieces
@@ -17,6 +20,7 @@ public class Board {
         board.add(new Bishop("C1", ChessPiece.Color.WHITE));
         board.add(new Queen("D1", ChessPiece.Color.WHITE));
         board.add(new King("E1", ChessPiece.Color.WHITE));
+        wKingPos = "E1";
         board.add(new Bishop("F1", ChessPiece.Color.WHITE));
         board.add(new Knight("G1", ChessPiece.Color.WHITE));
         board.add(new Rook("H1", ChessPiece.Color.WHITE));
@@ -33,6 +37,7 @@ public class Board {
         board.add(new Bishop("C8", ChessPiece.Color.BLACK));
         board.add(new Queen("D8", ChessPiece.Color.BLACK));
         board.add(new King("E8", ChessPiece.Color.BLACK));
+        bKingPos = "E8";
         board.add(new Bishop("F8", ChessPiece.Color.BLACK));
         board.add(new Knight("G8", ChessPiece.Color.BLACK));
         board.add(new Rook("H8", ChessPiece.Color.BLACK));
@@ -79,6 +84,16 @@ public class Board {
         return true;
     }
 
+    private void updateKingsPos(ChessPiece curr, String position) {
+        if(curr.getClass() == King.class) {
+            if(curr.getColor() == ChessPiece.Color.WHITE) {
+                wKingPos = position;
+            }else {
+                bKingPos = position;
+            }
+        }
+    }
+
     public void move(Class type, ChessPiece.Color color, String position) {
         ChessPiece onTargetPos = getChessPiece(position);
         boolean found = false;
@@ -105,6 +120,8 @@ public class Board {
                     if(onTargetPos != null){
                         board.remove(onTargetPos);
                     }
+
+                    updateKingsPos(curr, position);
 
                     found = true;
                     break;
@@ -146,6 +163,9 @@ public class Board {
             if(onTargetPos != null){
                 board.remove(onTargetPos);
             }
+
+            updateKingsPos(curr, newPosition);
+
         }catch (IllegalChessMoveException err) {
             if(!curr.getPosition().equals(initPos))
                 curr.move(initPos);
@@ -163,7 +183,7 @@ public class Board {
             lDiag = "" + (char)(pawn.getPosition().charAt(0) - 1) + (char)(pawn.getPosition().charAt(1) - 1);
             rDiag = "" + (char)(pawn.getPosition().charAt(0) + 1) + (char)(pawn.getPosition().charAt(1) - 1);
         }
-        int canEat = 0;
+        int canEat;
 
         ChessPiece lPiece = getChessPiece(lDiag);
         ChessPiece rPiece = getChessPiece(rDiag);
@@ -182,6 +202,72 @@ public class Board {
     }
 
     public boolean isCheck(ChessPiece.Color color) {
+        String currKingsPos = (color == ChessPiece.Color.WHITE)? wKingPos : bKingPos;
+
+        //Check Knight pieces
+        int[] klPos = {2, 1, -1, -2, -2, -1, 1, 2};
+        int[] kdPos = {1, 2, 2, 1, -1, -2, -2, -1};
+
+        for(int i = 0; i < 8; i++) {
+            try {
+                String posToCheck = posToCheck = "" + (char)(currKingsPos.charAt(0) + klPos[i]) + (char)(currKingsPos.charAt(1) + kdPos[i]);
+                ChessPiece.validateArg(posToCheck);
+
+                ChessPiece threat = getChessPiece(posToCheck);
+                if(threat != null && threat.getClass() == Knight.class && threat.getColor() != color)
+                    return true;
+
+            }catch (RuntimeException err) {
+                // Position not in board
+            }
+        }
+
+        // Neighbour fields to the king
+        int[] lPos = {1, 1, 0, -1, -1, -1, 0, 1};
+        int[] dPos = {0, 1, 1, 1, 0, -1, -1, -1};
+
+        for(int i = 0; i < 8; i++) {
+            try {
+                int posDist = 1;
+                String posToCheck = "";
+
+                while(posDist < 8) {
+                    posToCheck = "" + (char)(currKingsPos.charAt(0) + lPos[i] * posDist) + (char)(currKingsPos.charAt(1) + dPos[i] * posDist);
+                    ChessPiece.validateArg(posToCheck);
+                    if(getChessPiece(posToCheck) != null) {
+                        break;
+                    }
+                    posDist += 1;
+                }
+
+                // There is a piece in this direction
+                if(posDist < 8) {
+                    ChessPiece threat = getChessPiece(posToCheck);
+                    Class type = threat.getClass();
+                    ChessPiece.Color tColor = threat.getColor();
+
+                    boolean[] canCheckMe = {
+                            type == Rook.class,
+                            type == Bishop.class || (type == Pawn.class && tColor == ChessPiece.Color.BLACK),
+                            type == Rook.class,
+                            type == Bishop.class || (type == Pawn.class && tColor == ChessPiece.Color.BLACK),
+                            type == Rook.class,
+                            type == Bishop.class || (type == Pawn.class && tColor == ChessPiece.Color.WHITE),
+                            type == Rook.class,
+                            type == Bishop.class || (type == Pawn.class && tColor == ChessPiece.Color.WHITE),
+                    };
+
+                    if(type == Queen.class || type == King.class || canCheckMe[i]) {
+                        // If a piece can threat me and is the opposite color, it's a CHECK
+                        if(tColor != color)
+                            return true;
+                    }
+                }
+            }catch (RuntimeException err) {
+                // No more positions to check in this direction
+            }
+        }
+
         return false;
     }
 }

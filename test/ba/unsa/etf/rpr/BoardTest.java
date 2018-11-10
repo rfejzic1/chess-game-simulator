@@ -143,6 +143,22 @@ class BoardTest {
     }
 
     @Test
+        // Is the board usable after isCheck
+    void someLegalMovesB() {
+        Board b = new Board();
+        boolean no = b.isCheck(ChessPiece.Color.BLACK);
+        assertDoesNotThrow(
+                () -> {
+                    b.move(Pawn.class, ChessPiece.Color.BLACK, "E5");
+                    b.move(Bishop.class, ChessPiece.Color.BLACK, "A3");
+                    b.move(Knight.class, ChessPiece.Color.BLACK, "C6");
+                    b.move(King.class, ChessPiece.Color.BLACK, "E7");
+                    b.move(King.class, ChessPiece.Color.BLACK, "E6");
+                }
+        );
+    }
+
+    @Test
         // Pawn eats diagonally
     void pawnDiagonal() {
         Board b = new Board();
@@ -170,6 +186,19 @@ class BoardTest {
             // Do nothing
         }
         assertTrue(b.isCheck(ChessPiece.Color.BLACK));
+    }
+
+    @Test
+    void isCheckKnight() {
+        Board b = new Board();
+        try {
+            b.move(Knight.class, ChessPiece.Color.BLACK, "C6");
+            b.move(Knight.class, ChessPiece.Color.BLACK, "D4");
+            b.move(Knight.class, ChessPiece.Color.BLACK, "F3");
+        } catch(Exception e) {
+            // Do nothing
+        }
+        assertTrue(b.isCheck(ChessPiece.Color.WHITE));
     }
 
     @Test
