@@ -18,6 +18,6 @@ public class Knight extends ChessPiece {
         int dgtDif = abs(cDgt - dgt);
 
         if(ltrDif == 0 || dgtDif == 0 || ltrDif + dgtDif != 3)
-            throw new IllegalChessMoveException("Illegal move!");
+            throw new IllegalChessMoveException("Illegal move");
     }
 }

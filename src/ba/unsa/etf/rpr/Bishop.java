@@ -18,6 +18,6 @@ public class Bishop extends ChessPiece {
         int dgtDif = abs(cDgt - dgt);
 
         if(ltrDif != dgtDif)
-            throw new IllegalChessMoveException("Illegal move!");
+            throw new IllegalChessMoveException("Illegal move");
     }
 }

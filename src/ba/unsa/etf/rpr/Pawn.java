@@ -4,7 +4,6 @@ import static java.lang.Math.abs;
 
 public class Pawn extends ChessPiece {
     private int _canEat = 0;
-    private boolean canRet = false;
 
     public Pawn(String position, Color color) {
         super(position, color);
@@ -12,9 +11,6 @@ public class Pawn extends ChessPiece {
 
     public void canEat(int canEat) {
         this._canEat = canEat;
-    }
-    public void canRet(boolean canRet) {
-        this.canRet = canRet;
     }
 
     @Override
@@ -31,7 +27,7 @@ public class Pawn extends ChessPiece {
             if(cDgt == '2') {
                 if(dgtDif == 2) {
                     if(ltrDif != 0)
-                        throw new IllegalChessMoveException("Tu mač bijelog!");
+                        throw new IllegalChessMoveException("Illegal move");
                 }else{
                     stepWhite(ltrDif, dgtDif);
                 }
@@ -42,7 +38,7 @@ public class Pawn extends ChessPiece {
             if(cDgt == '7') {
                 if(dgtDif == -2 ) {
                     if(ltrDif != 0)
-                        throw new IllegalChessMoveException("Tu mač crnog!");
+                        throw new IllegalChessMoveException("Illegal move");
                 }else {
                     stepBlack(ltrDif, dgtDif);
                 }
@@ -56,23 +52,23 @@ public class Pawn extends ChessPiece {
         if(dgtDif == -1){
             step(ltrDif);
         }else {
-            throw new IllegalChessMoveException("Nemere crni u rikvertz!");
+            throw new IllegalChessMoveException("Illegal move");
         }
     }
 
     private void step(int ltrDif) {
         if(_canEat == -1) {
             if(ltrDif != -1 && ltrDif != 0)
-                throw new IllegalChessMoveException("Nemere desno jest");
+                throw new IllegalChessMoveException("Illegal move");
         }else if(_canEat == 1) {
             if(ltrDif != 1 && ltrDif != 0)
-                throw new IllegalChessMoveException("Nemere ljevo jest");
+                throw new IllegalChessMoveException("Illegal move");
         }else if(_canEat == 2){
             if(ltrDif != -1 && ltrDif != 0 && ltrDif != 1)
-                throw new IllegalChessMoveException("Mogo jest a ne valja polje");
+                throw new IllegalChessMoveException("Illegal move");
         }else {
             if(ltrDif != 0)
-                throw new IllegalChessMoveException("Nemere jest");
+                throw new IllegalChessMoveException("Illegal move");
         }
     }
 
@@ -80,7 +76,7 @@ public class Pawn extends ChessPiece {
         if(dgtDif == 1){
             step(ltrDif);
         }else {
-            throw new IllegalChessMoveException("Nemere bjeli u rikvertz!");
+            throw new IllegalChessMoveException("Illegal move");
         }
     }
 }
