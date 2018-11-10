@@ -120,33 +120,6 @@ public class Board {
         }
     }
 
-    private void checkIfCanEat(Pawn pawn) {
-        String lDiag = "", rDiag = "";
-
-        if(pawn.getColor() == ChessPiece.Color.WHITE) {
-            lDiag += (char)(pawn.getPosition().charAt(0) - 1) + (char)(pawn.getPosition().charAt(1) + 1);
-            rDiag += (char)(pawn.getPosition().charAt(0) + 1) + (char)(pawn.getPosition().charAt(1) + 1);
-        }else {
-            lDiag += (char)(pawn.getPosition().charAt(0) - 1) + (char)(pawn.getPosition().charAt(1) - 1);
-            rDiag += (char)(pawn.getPosition().charAt(0) + 1) + (char)(pawn.getPosition().charAt(1) - 1);
-        }
-        int canEat = 0;
-        ChessPiece lPiece = getChessPiece(lDiag);
-        ChessPiece rPiece = getChessPiece(rDiag);
-
-        if(lPiece == null){
-            canEat = -1;
-            if(rPiece == null)
-                canEat = 2;
-        }else {
-            canEat = 0;
-            if(rPiece == null)
-                canEat = 1;
-        }
-
-        pawn.canEat(canEat);
-    }
-
     public void move(String oldPosition, String newPosition) {
         ChessPiece curr = getChessPiece(oldPosition);
 
@@ -178,6 +151,34 @@ public class Board {
                 curr.move(initPos);
             throw err;
         }
+    }
+
+    private void checkIfCanEat(Pawn pawn) {
+        String lDiag, rDiag;
+
+        if(pawn.getColor() == ChessPiece.Color.WHITE) {
+            lDiag = "" + (char)(pawn.getPosition().charAt(0) - 1) + (char)(pawn.getPosition().charAt(1) + 1);
+            rDiag = "" + (char)(pawn.getPosition().charAt(0) + 1) + (char)(pawn.getPosition().charAt(1) + 1);
+        }else {
+            lDiag = "" + (char)(pawn.getPosition().charAt(0) - 1) + (char)(pawn.getPosition().charAt(1) - 1);
+            rDiag = "" + (char)(pawn.getPosition().charAt(0) + 1) + (char)(pawn.getPosition().charAt(1) - 1);
+        }
+        int canEat = 0;
+
+        ChessPiece lPiece = getChessPiece(lDiag);
+        ChessPiece rPiece = getChessPiece(rDiag);
+
+        if(lPiece != null){
+            canEat = -1;
+            if(rPiece != null)
+                canEat = 2;
+        }else {
+            canEat = 0;
+            if(rPiece != null)
+                canEat = 1;
+        }
+
+        pawn.canEat(canEat);
     }
 
     public boolean isCheck(ChessPiece.Color color) {
